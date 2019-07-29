@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+            app:key="@string/uiKey"
+            app:title="@string/settingsAppearance">
+
+        <SwitchPreference
+                app:key="@string/darkThemeKey"
+                android:defaultValue="false"
+                app:title="@string/settingsDarkTheme"/>
+
+        <SwitchPreference
+                android:key="@string/isAMPMSelectedKey"
+                android:defaultValue="false"
+                android:title="@string/settingsAMPMTime"
+        />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:key="@string/notificationsKey"
+            android:title="@string/settingsNotifications">
+
+        <SwitchPreference
+                android:key="@string/notificationsEnabledKey"
+                android:defaultValue="false"
+                android:title="@string/settingsNotificationsEnabled"/>
+
+
+        <Preference
+            android:key="@string/notificationModeKey"
+            android:title="@string/settingsNotificationsMode"
+            android:persistent="false"
+            android:dependency="@string/notificationsEnabledKey"
+        />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

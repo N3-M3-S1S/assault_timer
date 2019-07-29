@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="darkThemeKey" translatable="false">darkTheme</string>
+    <string name="isAMPMSelectedKey" translatable="false">isAMPMSelected</string>
+    <string name="notificationsEnabledKey" translatable="false">notificationsEnabled</string>
+    <string name="notificationModeKey" translatable="false">notificationMode</string>
+    <string name="lastSelectedRegionKey" translatable="false">lastSelectedRegion</string>
+    <string name="lastSelectedAssaultTypeKey" translatable="false">lastSelectedAssaultType</string>
+    <string name="automaticNotificationsSettingsKey" translatable="false">automaticNotificationSettings</string>
+    <string name="uiKey" translatable="false">ui</string>
+    <string name="notificationsKey" translatable="false">notifications</string>
+    <string name="timeZoneIdKey" translatable="false">timeZoneId</string>
+    <string name="notificationRequestCodesKey" translatable="false">notificationRequestCodes</string>
+</resources>

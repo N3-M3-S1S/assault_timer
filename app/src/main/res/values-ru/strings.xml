@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="assaultSchedule">Расписание:</string>
+    <string name="assaultActive">Активно</string>
+    <string name="assaultEnded">Кончилось</string>
+    <string name="assaultEnding">Заканчивается</string>
+    <string name="assaultIncoming">Начнется через</string>
+    <string name="assaultNotificationMessage">Началось в: %1$s Заканчивается в: %2$s</string>
+    <string name="assaultNotificationTitle">%1$s началось (%2$s)</string>
+    <string name="assaultStartEndTitle">Начало:\nКонец:</string>
+    <string name="automaticNotificationSettings">Параметры автоматических уведомлений</string>
+    <string name="settingsAMPMTime">Использовать 12-часовой формат для времени</string>
+    <string name="settingsAppearance">Внешний вид</string>
+    <string name="settingsDarkTheme">Тёмная тема</string>
+    <string name="settingsNotifications">Уведомления</string>
+    <string name="settingsNotificationsEnabled">Уведомления включены</string>
+    <string name="settingsNotificationsMode">Режим уведомлений</string>
+    <string name="settingsTitle">Параметры</string>
+    <string name="activeAssaultNotificationErrorMessage">Невозможно запланировать уведомление для активного вторжения</string>
+    <string name="EUTitle">Европа</string>
+    <string name="NATitle">Северная Америка</string>
+    <string name="notificationModeAutoTitle">Ближайшее вторжение</string>
+    <string name="notificationModeManualTitle">Вручную</string>
+    <string name="notificationChannelName">Уведомления о начале вторжений</string>
+
+</resources>

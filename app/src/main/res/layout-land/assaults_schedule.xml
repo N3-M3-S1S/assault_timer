@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="viewModel" type="com.rektapps.assaulttimer.viewmodel.AssaultScheduleListViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/assaultViewRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/assaultsScheduleProgressBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.Group android:id="@+id/hiddenWhenListLoading"
+                                                app:constraint_referenced_ids="assaultSchedule, scheduleTitle, assaultState, assaultTimer"
+                                                android:layout_height="wrap_content"
+                                                android:layout_width="wrap_content"/>
+
+
+        <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/assaultsTypeTabLayout"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      android:id="@+id/tabBFA"
+                                                      android:text="@string/BFATitle"/>
+
+            <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+                                                      android:layout_height="wrap_content"
+                                                      android:id="@+id/tabLegion"
+                                                      android:text="@string/LegionTitle"/>
+        </com.google.android.material.tabs.TabLayout>
+
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="32dp"
+                android:id="@+id/assaultState"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                app:setAssaultStateText="@{viewModel.getActiveAssaultState()}"
+                app:setAssaultStateTextColor="@{viewModel.getActiveAssaultState()}"
+                tools:text="STATE"
+                android:textAppearance="@android:style/TextAppearance.Material.Headline"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintBottom_toTopOf="@+id/assaultTimer"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintVertical_chainStyle="packed" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/assaultsTypeTabLayout"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/assaultTimer"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:gravity="center"
+                app:setTimer="@{viewModel.getFirstAssaultInListStateDuration()}"
+                app:setAssaultStateTextColor="@{viewModel.getActiveAssaultState()}"
+                tools:text="00:00:00"
+                android:textAppearance="@android:style/TextAppearance.Material.Display2"
+                app:layout_constraintEnd_toEndOf="@+id/assaultState"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/assaultState"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+
+        <TextView
+                android:text="@string/assaultSchedule"
+                android:id="@+id/scheduleTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/assaultsTypeTabLayout"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginTop="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/assaultSchedule"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scheduleTitle"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:setAssaults="@{viewModel.getAssaultListItems()}"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/guideline"
+                app:layout_constraintGuide_percent="0.4"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

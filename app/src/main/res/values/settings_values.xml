@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="notificationModesValues">
+        <item>0</item>  <!-- Automatic -->
+        <item>1</item>  <!-- Manual -->
+    </string-array>
+
+    <string-array name="notificationAssaultTypeValues">
+        <item>0</item> <!-- BFA -->
+        <item>1</item> <!-- Legion -->
+    </string-array>
+
+    <string-array name="notificationRegions">
+        <item>EU</item>
+        <item>NA</item>
+    </string-array>
+
+    <string-array name="notificationRegionsValues">
+        <item>0</item> <!-- EU -->
+        <item>1</item> <!-- NA -->
+    </string-array>
+</resources>

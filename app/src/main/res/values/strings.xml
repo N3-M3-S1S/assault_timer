@@ -1,0 +1,37 @@
+<resources>
+
+    <string name="drawerOpen" translatable="false">Open menu</string>
+    <string name="drawerClose" translatable="false">Close menu</string>
+
+    <string name="BFATitle" translatable="false">BFA</string>
+    <string name="LegionTitle" translatable="false">Legion</string>
+
+    <string name="app_name" translatable="false">Assault Timer</string>
+    <string name="EUTitle">Europe</string>
+    <string name="NATitle">North America</string>
+
+    <string name="assaultSchedule">Schedule:</string>
+    <string name="assaultStartEndTitle">Start:\nEnd:</string>
+    <string name="assaultStartEndTimeTemplate" translatable="false">%1$s\n%2$s</string>
+    <string name="assaultIncoming">Starts in</string>
+    <string name="assaultActive">Active</string>
+    <string name="assaultEnding">Ending</string>
+    <string name="assaultEnded">Ended</string>
+
+    <string name="assaultNotificationTitle">%1$s started (%2$s)</string>
+    <string name="assaultNotificationMessage">Started at: %1$s Ends at: %2$s</string>
+
+    <string name="activeAssaultNotificationErrorMessage">Cannot schedule a notification for an active assault</string>
+
+    <string name="settingsTitle">Settings</string>
+    <string name="settingsAppearance">Appearance</string>
+    <string name="settingsDarkTheme">Dark theme</string>
+    <string name="settingsAMPMTime">Use 12-hour format for time</string>
+    <string name="settingsNotifications">Notifications</string>
+    <string name="settingsNotificationsEnabled">Notifications enabled</string>
+    <string name="settingsNotificationsMode">Notification mode</string>
+    <string name="automaticNotificationSettings">Automatic notification settings</string>
+    <string name="notificationModeAutoTitle">First incoming assault</string>
+    <string name="notificationModeManualTitle">Manual</string>
+
+</resources>

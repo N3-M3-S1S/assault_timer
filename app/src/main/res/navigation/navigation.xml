@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation" app:startDestination="@id/assaultsFragment">
+
+    <fragment android:id="@+id/assaultsFragment" android:name="com.rektapps.assaulttimer.view.assaultsSchedule.AssaultScheduleFragment"
+              android:label="AssaultsFragment">
+        <action android:id="@+id/fromListToSettings" app:destination="@id/settingsFragment"
+        />
+
+
+    </fragment>
+    <fragment android:id="@+id/settingsFragment" android:name="com.rektapps.assaulttimer.view.settings.SettingsFragment"
+              android:label="SettingsFragment">
+        <action android:id="@+id/fromSettingsToList" app:destination="@id/assaultsFragment" app:launchSingleTop="false"
+                app:popUpTo="@+id/assaultsFragment" app:popUpToInclusive="true"
+        />
+    </fragment>
+    <action android:id="@+id/action_navigation_self" app:destination="@id/navigation" app:launchSingleTop="true"/>
+</navigation>

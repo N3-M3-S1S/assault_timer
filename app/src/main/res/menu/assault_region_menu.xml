@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/assaultRegionEU"
+            android:title="@string/EUTitle"/>
+    <item
+            android:id="@+id/assaultRegionNA"
+            android:title="@string/NATitle"/>
+
+</menu>
